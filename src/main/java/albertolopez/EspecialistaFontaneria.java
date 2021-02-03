@@ -3,21 +3,20 @@ package albertolopez;
 import java.time.LocalDate;
 
 /**
- * @author Alberto López Puertas 
+ * @author Alberto López Puertas
  * <https://github.com/alopezp90>
  */
-
 public class EspecialistaFontaneria extends Oficial {
-    
+
     private int experiencia; //años
-    
+
     public EspecialistaFontaneria() {
         super();
         this.experiencia = 0;
     }
-    
-    public EspecialistaFontaneria(String nombre, String dni, LocalDate fechaNacimiento, boolean trabajando, 
-            int categoria, boolean liderCuadrilla, 
+
+    public EspecialistaFontaneria(String nombre, String dni, LocalDate fechaNacimiento, boolean trabajando,
+            int categoria, boolean liderCuadrilla,
             int experiencia) {
         super(nombre, dni, fechaNacimiento, trabajando, categoria, liderCuadrilla);
         this.experiencia = experiencia;
@@ -48,5 +47,12 @@ public class EspecialistaFontaneria extends Oficial {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void darEPIs() {
+        super.darEPIs();
+        System.out.println("Escalera"
+                + "\nMascarilla con filtro");
     }
 }

@@ -13,6 +13,7 @@ public class Trabajador {
     private String dni;
     private LocalDate fechaNacimiento;
     private boolean trabajando;
+    private boolean tieneEPIs; //Siempre se inicializa false
 
     public Trabajador() {
         this.nombre = "Juan Carlos Vico";
@@ -60,6 +61,14 @@ public class Trabajador {
         this.trabajando = trabajando;
     }
 
+    public boolean isTieneEPIs() {
+        return tieneEPIs;
+    }
+
+    public void setTieneEPIs(boolean tieneEPIs) {
+        this.tieneEPIs = tieneEPIs;
+    }
+
     @Override
     public String toString() {
         return "Trabajador:"
@@ -101,5 +110,13 @@ public class Trabajador {
             return false;
         }
         return true;
+    }
+    
+    public void darEPIs() {
+        this.tieneEPIs = true;
+        System.out.println("Se le han entregado:"
+                + "\nCasco"
+                + "\nChaleco reflectante"
+                + "\nBotas de seguridad");
     }
 }

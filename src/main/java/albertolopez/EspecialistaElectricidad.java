@@ -50,6 +50,10 @@ public class EspecialistaElectricidad extends Oficial {
         return true;
     }
     
-    
-
+    @Override
+    public void darEPIs() {
+        super.darEPIs();
+        System.out.println("Guantes de goma"
+                + "\nCalzado antiestatico");
+    }
 }

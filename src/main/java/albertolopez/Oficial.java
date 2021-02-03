@@ -62,4 +62,11 @@ public class Oficial extends Trabajador{
         }
         return true;
     }
+    
+    @Override
+    public void darEPIs() {
+        super.darEPIs();
+        System.out.println("Guantes"
+                + "\nArnes");
+    }
 }
