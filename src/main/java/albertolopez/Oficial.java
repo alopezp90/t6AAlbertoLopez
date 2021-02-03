@@ -73,4 +73,10 @@ public class Oficial extends Trabajador{
     public boolean tieneQueHacerInforme() {
         return this.liderCuadrilla && this.categoria == 1;
     }
+    
+    public void ascender() {
+        if (this.categoria != 1) {
+            this.categoria = 1;
+        }
+    }
 }
