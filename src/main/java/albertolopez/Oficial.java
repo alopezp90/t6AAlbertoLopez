@@ -1,21 +1,25 @@
 package albertolopez;
 
+import java.time.LocalDate;
+
 /**
  * @author Alberto López Puertas 
  * <https://github.com/alopezp90>
  */
 
-public class Oficial {
+public class Oficial extends Trabajador{
     
     private int categoria;
     private boolean liderCuadrilla;
 
     public Oficial() {
+        super();
         this.categoria = 1;
         this.liderCuadrilla = false;
     }
 
-    public Oficial(int categoria, boolean liderCuadrilla) {
+    public Oficial(String nombre, String dni, LocalDate fechaNacimiento, boolean trabajando, int categoria, boolean liderCuadrilla) {
+        super(nombre, dni, fechaNacimiento, trabajando);
         this.categoria = categoria;
         this.liderCuadrilla = liderCuadrilla;
     }
