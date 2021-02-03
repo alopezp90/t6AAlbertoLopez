@@ -23,4 +23,33 @@ public class EspecialistaElectricidad extends Oficial {
         this.tieneCursoFormacion = tieneCursoFormacion;
     }
 
+    public boolean isTieneCursoFormacion() {
+        return tieneCursoFormacion;
+    }
+
+    public void setTieneCursoFormacion(boolean tieneCursoFormacion) {
+        this.tieneCursoFormacion = tieneCursoFormacion;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + (this.tieneCursoFormacion ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        final EspecialistaElectricidad other = (EspecialistaElectricidad) obj;
+        if (this.tieneCursoFormacion != other.tieneCursoFormacion) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+
 }
