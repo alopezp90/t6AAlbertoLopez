@@ -1,6 +1,7 @@
 package albertolopez;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * @author Alberto López Puertas
@@ -54,5 +55,14 @@ public class EspecialistaFontaneria extends Oficial {
         super.darEPIs();
         System.out.println("Escalera"
                 + "\nMascarilla con filtro");
+    }
+
+    public void compruebaExperiencia() {
+        if ((int) ChronoUnit.YEARS.between(this.getFechaNacimiento(), LocalDate.now()) < this.experiencia + 16) {
+            System.out.println("Algo raro pasa, baja hasta comprobar");
+            this.setTrabajando(false);
+        } else {
+            System.out.println("Sigan, sigan");
+        }
     }
 }
