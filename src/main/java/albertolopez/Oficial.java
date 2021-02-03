@@ -69,4 +69,8 @@ public class Oficial extends Trabajador{
         System.out.println("Guantes"
                 + "\nArnes");
     }
+    
+    public boolean tieneQueHacerInforme() {
+        return this.liderCuadrilla && this.categoria == 1;
+    }
 }
