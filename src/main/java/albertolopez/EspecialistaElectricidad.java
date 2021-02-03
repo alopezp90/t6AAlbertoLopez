@@ -65,4 +65,9 @@ public class EspecialistaElectricidad extends Oficial {
             System.out.println("A currar!");
         }
     }
+    
+    @Override
+    public boolean tieneQueHacerInforme() {
+        return this.getCategoria() == 1 && this.tieneCursoFormacion;
+    }
 }

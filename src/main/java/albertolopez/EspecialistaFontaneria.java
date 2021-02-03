@@ -65,4 +65,9 @@ public class EspecialistaFontaneria extends Oficial {
             System.out.println("Sigan, sigan");
         }
     }
+
+    @Override
+    public boolean tieneQueHacerInforme() {
+        return this.getCategoria() == 1 && this.experiencia > 2;
+    }
 }
