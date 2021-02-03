@@ -56,4 +56,13 @@ public class EspecialistaElectricidad extends Oficial {
         System.out.println("Guantes de goma"
                 + "\nCalzado antiestatico");
     }
+    
+    public void esMalDiaParaUnChispazo(){
+        if(this.getFechaNacimiento().getMonth().equals(LocalDate.now().getMonth()) && 
+                this.getFechaNacimiento().getDayOfMonth() == LocalDate.now().getDayOfMonth()) {
+            System.out.println("Dia libre, que es mal dia para un chispazo.");
+        } else {
+            System.out.println("A currar!");
+        }
+    }
 }
