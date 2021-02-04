@@ -29,6 +29,7 @@ public class Prueba {
         trabajadores.add(t1);
         trabajadores.add(t2);
 
+        //Conversiones implicitas
         trabajadores.add(o1);
         trabajadores.add(o2);
 
@@ -37,5 +38,21 @@ public class Prueba {
 
         trabajadores.add(f1);
         trabajadores.add(f2);
+
+        for (Trabajador trabajador : trabajadores) {
+            trabajador.darEPIs();
+            if (trabajador instanceof Oficial) {
+                //conversion explicita
+                ((Oficial) trabajador).ascender();
+            }
+            if (trabajador instanceof EspecialistaElectricidad) {
+                //conversion explicita
+                ((EspecialistaElectricidad) trabajador).esMalDiaParaUnChispazo();
+            }
+            if (trabajador instanceof EspecialistaFontaneria) {
+                //conversion explicita
+                ((EspecialistaFontaneria) trabajador).compruebaExperiencia();
+            }
+        }
     }
 }
