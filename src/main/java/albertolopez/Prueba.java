@@ -54,5 +54,9 @@ public class Prueba {
                 ((EspecialistaFontaneria) trabajador).compruebaExperiencia();
             }
         }
+
+        if (trabajadores.contains(e2)) {
+            trabajadores.remove(trabajadores.indexOf(e2));
+        }
     }
 }
